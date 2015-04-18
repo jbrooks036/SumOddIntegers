@@ -4,38 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// C# Program that sums all the odd members of a list of integers
 namespace SumOddIntegers
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<int> intList= new List<int>() { 1, 2, 3 };
-
-            List<int> intList2 = new List<int>{ 0, 1, 2, 3, 4, 5, 6, 7};
+            List<int> intList= new List<int>() { 0, 2, 13, 3, 42, 6, 71, 0, -1, -2, -3};
 
             int sum = 0;
 
             int listLength = intList.Count;
 
-            for (int i=0; i <= listLength; i++)
+            for (int i=0; i < listLength; i++)
             {
                 if (intList[i] % 2 != 0)
                 {
+                    System.Console.WriteLine("i = " + i);
                     sum += intList[i];
+                    System.Console.WriteLine("Sum = " + sum);
                 }
             }
 
-            Console.WriteLine("Sum = " + sum);
-            // return sum;
-
-            /*
-            List<int> list = new List<int>();
-            list.Add(2);
-            list.Add(3);
-            list.Add(5);
-            list.Add(7);
-            */
+            System.Console.WriteLine("Sum = " + sum);
+            System.Console.WriteLine("Press any key to exit...");
+            System.Console.ReadKey();
+            
         }
     }
 }
